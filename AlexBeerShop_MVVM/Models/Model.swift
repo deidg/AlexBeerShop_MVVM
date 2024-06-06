@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+struct BeersModel: Codable {
+    let beers: [SingleBeer]
+}
+
+struct SingleBeer: Codable {
+    let id: Int
+    let name: String
+    let description: String
+    let imageURL: String
+    
+    enum CodingKeys: CodingKey {
+        case id
+        case name
+        case description
+        case imageURL //= "imageUrl"
+    }
+}
