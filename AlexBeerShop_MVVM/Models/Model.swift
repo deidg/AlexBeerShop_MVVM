@@ -17,10 +17,10 @@ struct SingleBeer: Codable {
     let description: String
     let imageURL: String
     
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case name
         case description
-        case imageURL //= "imageUrl"
+        case imageURL = "imageUrl"
     }
 }
