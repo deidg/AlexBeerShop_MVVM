@@ -10,9 +10,11 @@
 		FAC8B22F2C07A592007BE026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B22E2C07A592007BE026 /* AppDelegate.swift */; };
 		FAC8B2312C07A592007BE026 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2302C07A592007BE026 /* SceneDelegate.swift */; };
 		FAC8B2332C07A592007BE026 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2322C07A592007BE026 /* ViewController.swift */; };
-		FAC8B2362C07A592007BE026 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FAC8B2352C07A592007BE026 /* Base */; };
 		FAC8B2382C07A595007BE026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC8B2372C07A595007BE026 /* Assets.xcassets */; };
 		FAC8B23B2C07A595007BE026 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FAC8B23A2C07A595007BE026 /* Base */; };
+		FAC8B2482C120D9D007BE026 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2472C120D9D007BE026 /* Model.swift */; };
+		FAC8B24A2C120EC2007BE026 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2492C120EC2007BE026 /* NetworkRequest.swift */; };
+		FAC8B24D2C120FD5007BE026 /* BeerDataSet.json in Resources */ = {isa = PBXBuildFile; fileRef = FAC8B24C2C120FD4007BE026 /* BeerDataSet.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		FAC8B22E2C07A592007BE026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC8B2302C07A592007BE026 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAC8B2322C07A592007BE026 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAC8B2352C07A592007BE026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC8B2372C07A595007BE026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC8B23A2C07A595007BE026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC8B23C2C07A595007BE026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC8B2472C120D9D007BE026 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FAC8B2492C120EC2007BE026 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		FAC8B24C2C120FD4007BE026 /* BeerDataSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerDataSet.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		FAC8B22D2C07A592007BE026 /* AlexBeerShop_MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				FAC8B22E2C07A592007BE026 /* AppDelegate.swift */,
-				FAC8B2302C07A592007BE026 /* SceneDelegate.swift */,
-				FAC8B2322C07A592007BE026 /* ViewController.swift */,
-				FAC8B2342C07A592007BE026 /* Main.storyboard */,
-				FAC8B2372C07A595007BE026 /* Assets.xcassets */,
-				FAC8B2392C07A595007BE026 /* LaunchScreen.storyboard */,
 				FAC8B23C2C07A595007BE026 /* Info.plist */,
+				FAC8B2422C1209EB007BE026 /* Application */,
+				FAC8B2442C120A6B007BE026 /* Models */,
+				FAC8B2432C1209F9007BE026 /* Resources */,
+				FAC8B2462C120A91007BE026 /* ViewModels */,
+				FAC8B2452C120A82007BE026 /* Views */,
 			);
 			path = AlexBeerShop_MVVM;
+			sourceTree = "<group>";
+		};
+		FAC8B2422C1209EB007BE026 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8B22E2C07A592007BE026 /* AppDelegate.swift */,
+				FAC8B2302C07A592007BE026 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FAC8B2432C1209F9007BE026 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8B24C2C120FD4007BE026 /* BeerDataSet.json */,
+				FAC8B2372C07A595007BE026 /* Assets.xcassets */,
+				FAC8B2392C07A595007BE026 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAC8B2442C120A6B007BE026 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8B2472C120D9D007BE026 /* Model.swift */,
+				FAC8B24B2C120ECA007BE026 /* Networking */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAC8B2452C120A82007BE026 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8B2322C07A592007BE026 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAC8B2462C120A91007BE026 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAC8B24B2C120ECA007BE026 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8B2492C120EC2007BE026 /* NetworkRequest.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +179,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC8B24D2C120FD5007BE026 /* BeerDataSet.json in Resources */,
 				FAC8B2382C07A595007BE026 /* Assets.xcassets in Resources */,
 				FAC8B23B2C07A595007BE026 /* Base in Resources */,
-				FAC8B2362C07A592007BE026 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,20 +195,14 @@
 				FAC8B2332C07A592007BE026 /* ViewController.swift in Sources */,
 				FAC8B22F2C07A592007BE026 /* AppDelegate.swift in Sources */,
 				FAC8B2312C07A592007BE026 /* SceneDelegate.swift in Sources */,
+				FAC8B2482C120D9D007BE026 /* Model.swift in Sources */,
+				FAC8B24A2C120EC2007BE026 /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FAC8B2342C07A592007BE026 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAC8B2352C07A592007BE026 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAC8B2392C07A595007BE026 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,9 +344,9 @@
 				INFOPLIST_FILE = AlexBeerShop_MVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +354,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "alex.AlexBeerShop-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,9 +375,9 @@
 				INFOPLIST_FILE = AlexBeerShop_MVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +385,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "alex.AlexBeerShop-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
