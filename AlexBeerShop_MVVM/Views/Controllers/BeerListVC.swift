@@ -10,16 +10,10 @@ import SnapKit
 import Kingfisher
 
 
-
-
 final class BeerListVC: UIViewController {
-    
-    
     //MARK: - Elements
     private var beersList = [SingleBeer]()
-    
     private let viewModel = BeerViewModel()
-    
     private let beersTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(BeerCell.self, forCellReuseIdentifier: "beerCell")
@@ -56,13 +50,11 @@ final class BeerListVC: UIViewController {
     }
     
     //MARK: - Methods
-    
     func setupBindings() {
         viewModel.updateView = { [weak self] beer in
             guard let self = self, let beer = beer else { return }
             self.beersList = beer
             beersTableView.reloadData()
-            
         }
     }
     
@@ -74,10 +66,7 @@ final class BeerListVC: UIViewController {
     // MARK: - @objc methods
     @objc private func dismissDetailVC() {
         dismiss(animated: true)
-    }
-    
-    
-    
+    }    
     //MARK: - Extensions - Delegates
     
 }
