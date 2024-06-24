@@ -84,7 +84,6 @@ final class DetailVC: UIViewController {
             make.trailing.leading.equalTo(view.safeAreaLayoutGuide).inset(5)
         }
     }
-    //MARK: - Private methods
     //MARK: - Public methods
     func configureView(with beer: SingleBeer) {
         DispatchQueue.main.async { [weak self] in
@@ -97,13 +96,6 @@ final class DetailVC: UIViewController {
         }
     }
 }
-
-//MARK: - @objc methods
-
-
-//MARK: - Extensions - Delegates
-
-
 // MARK: - Constants
 extension DetailVC {
     enum Constants {

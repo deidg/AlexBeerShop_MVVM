@@ -27,24 +27,23 @@ final class BeerListVC: UIViewController {
         setupVC()
         setupUI()
         setupDelegates()
-//        viewModel.fetchBeerListForSetup()
         setupBindings()
     }
     //MARK: - Private methods
-    func setupVC() {
+    private func setupVC() {
         view.backgroundColor = .white
         title = "Beer list"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    func setupUI() {
+    private func setupUI() {
         view.addSubview(beersTableView)
         beersTableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
-    func setupDelegates() {
+    private func setupDelegates() {
         beersTableView.dataSource = self
         beersTableView.delegate = self
     }
@@ -63,12 +62,10 @@ final class BeerListVC: UIViewController {
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
-    // MARK: - @objc methods
+    //MARK: - @objc methods
     @objc private func dismissDetailVC() {
         dismiss(animated: true)
-    }    
-    //MARK: - Extensions - Delegates
-    
+    }
 }
 
 extension BeerListVC: UITableViewDataSource, UITableViewDelegate {
@@ -90,4 +87,3 @@ extension BeerListVC: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-//extension BeerListVC:

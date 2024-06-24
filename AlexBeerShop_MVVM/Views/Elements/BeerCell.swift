@@ -37,7 +37,6 @@ final class BeerCell: UITableViewCell {
         let descriptionLabel = UILabel()
         descriptionLabel.numberOfLines = 3
         descriptionLabel.textColor = UIColor.gray
-        //        descriptionLabel.font = .systemFont(ofSize: 16, weight: .regular)
         descriptionLabel.text = "Description"
         return descriptionLabel
     }()
