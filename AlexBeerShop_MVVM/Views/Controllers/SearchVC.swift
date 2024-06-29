@@ -15,7 +15,7 @@ final class SearchVC: UIViewController {
     //MARK: - Elements
     private let searchController = UISearchController(searchResultsController: nil)
     private let beerViewTamplate = DetailBeerView()
-    private let beerViewModel = BeerViewModel()
+    private let searchByIdVewModel = SearchByIdVewModel()
     private let onBoardLabel: UILabel = {
         let onBoardLabel = UILabel()
         onBoardLabel.text = "Enter beer ID (from 1 to 25)"
@@ -78,7 +78,7 @@ extension SearchVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let inputId = Int(searchController.searchBar.text ?? "") else { return }
         if inputId > 0 && inputId < 26 {
-            beerViewModel.fetchBeerById(inputId: inputId) { [weak self] (singleBeer: SingleBeer?) in
+            searchByIdVewModel.fetchBeerById(inputId: inputId) { [weak self] (singleBeer: SingleBeer?) in
                 guard let self = self, let beer = singleBeer else { return }
                 self.beerViewTamplate.isHidden = false
                 self.onBoardLabel.isHidden = true
