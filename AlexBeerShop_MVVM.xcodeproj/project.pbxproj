@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA12E3462C2AF3CC0061E781 /* DetaiBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12E3452C2AF3CC0061E781 /* DetaiBeerView.swift */; };
 		FAC8B22F2C07A592007BE026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B22E2C07A592007BE026 /* AppDelegate.swift */; };
 		FAC8B2312C07A592007BE026 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2302C07A592007BE026 /* SceneDelegate.swift */; };
 		FAC8B2382C07A595007BE026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC8B2372C07A595007BE026 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA12E3452C2AF3CC0061E781 /* DetaiBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaiBeerView.swift; sourceTree = "<group>"; };
 		FAC8B22B2C07A592007BE026 /* AlexBeerShop_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlexBeerShop_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8B22E2C07A592007BE026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC8B2302C07A592007BE026 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC8B2582C15DCE5007BE026 /* BeerCell.swift */,
+				FA12E3452C2AF3CC0061E781 /* DetaiBeerView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				FAC8B2532C159B7A007BE026 /* SearchVC.swift in Sources */,
 				FAC8B2552C159BAA007BE026 /* RandomBeerVC.swift in Sources */,
+				FA12E3462C2AF3CC0061E781 /* DetaiBeerView.swift in Sources */,
 				FAC8B2652C20A5F3007BE026 /* BeerViewModel.swift in Sources */,
 				FAC8B22F2C07A592007BE026 /* AppDelegate.swift in Sources */,
 				FAC8B2312C07A592007BE026 /* SceneDelegate.swift in Sources */,
