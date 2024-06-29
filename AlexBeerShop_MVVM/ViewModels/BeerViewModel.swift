@@ -14,6 +14,7 @@ class BeerViewModel {
     let networkRequest = NetworkRequest()
     
     var updateView: (([SingleBeer]?) -> Void)?
+    var beerById: ((SingleBeer?) -> Void)?
     
     init() {
         fetchBeerListForSetup()
@@ -26,5 +27,13 @@ class BeerViewModel {
             }
         }
     
+    }
+    
+     func fetchBeerById(inputId: Int, completion: @escaping (SingleBeer?) -> Void) {
+        DispatchQueue.main.async { [weak self] in
+            self?.networkRequest.searchByID(id: inputId) { beer in
+                completion(beer)
+            }
+        }
     }
 }
