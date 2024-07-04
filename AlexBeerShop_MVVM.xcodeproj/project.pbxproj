@@ -25,6 +25,7 @@
 		FAC8B25F2C15DDA8007BE026 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC8B25E2C15DDA8007BE026 /* SnapKit */; };
 		FAC8B2632C1B585E007BE026 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2622C1B585E007BE026 /* DetailVC.swift */; };
 		FAC8B2652C20A5F3007BE026 /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B2642C20A5F3007BE026 /* BeerViewModel.swift */; };
+		FACE9D182C3041E200B85B35 /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE9D172C3041E200B85B35 /* RandomBeerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FAC8B2582C15DCE5007BE026 /* BeerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
 		FAC8B2622C1B585E007BE026 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		FAC8B2642C20A5F3007BE026 /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
+		FACE9D172C3041E200B85B35 /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				FAC8B2642C20A5F3007BE026 /* BeerViewModel.swift */,
 				FA12E3472C3031F60061E781 /* SearchByIdVewModel.swift */,
+				FACE9D172C3041E200B85B35 /* RandomBeerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA12E3482C3031F60061E781 /* SearchByIdVewModel.swift in Sources */,
+				FACE9D182C3041E200B85B35 /* RandomBeerViewModel.swift in Sources */,
 				FAC8B2532C159B7A007BE026 /* SearchVC.swift in Sources */,
 				FAC8B2552C159BAA007BE026 /* RandomBeerVC.swift in Sources */,
 				FA12E3462C2AF3CC0061E781 /* DetaiBeerView.swift in Sources */,
