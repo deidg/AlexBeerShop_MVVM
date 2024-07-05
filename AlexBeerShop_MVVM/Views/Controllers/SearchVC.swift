@@ -76,13 +76,18 @@ final class SearchVC: UIViewController {
 //MARK: - Extensions - Delegates
 extension SearchVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let inputId = Int(searchController.searchBar.text ?? "") else { return }
-        if inputId > 0 && inputId < 26 {
+        if let searchText = searchController.searchBar.text, searchText.isEmpty {
+            beerViewTamplate.isHidden = true
+            onBoardLabel.isHidden = false
+            onBoardLabel.text = "Enter beer ID (from 1 to 25)"
+            onBoardLabel.textColor = .red
+        } else if let inputId = Int(searchController.searchBar.text ?? ""), inputId > 0 && inputId < 26 {
             searchByIdVewModel.fetchBeerById(inputId: inputId) { [weak self] (singleBeer: SingleBeer?) in
                 guard let self = self, let beer = singleBeer else { return }
                 self.beerViewTamplate.isHidden = false
                 self.onBoardLabel.isHidden = true
-                beerViewTamplate.configureView(singleBeer: beer)
+                self.beerViewTamplate.configureView(singleBeer: beer)
+                onBoardLabel.textColor = .red
             }
         } else {
             beerViewTamplate.isHidden = true
@@ -92,5 +97,4 @@ extension SearchVC: UISearchResultsUpdating {
         }
     }
 }
-
 
