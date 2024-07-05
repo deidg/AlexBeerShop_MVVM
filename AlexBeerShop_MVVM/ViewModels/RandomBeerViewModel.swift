@@ -7,8 +7,8 @@
 
 import Foundation
 
-
 class RandomBeerViewModel {
+    
     let networkRequest = NetworkRequest()
     var randomBeer: ((SingleBeer?) -> Void)?
 

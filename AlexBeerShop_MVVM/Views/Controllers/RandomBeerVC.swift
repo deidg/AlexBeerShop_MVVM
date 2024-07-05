@@ -6,13 +6,11 @@
 //
 
 import UIKit
-
+import SnapKit
 
 final class RandomBeerVC: UIViewController {
-    
     //MARK: - Elements
-//    let detailVC =  DetailVC(beer: <#SingleBeer#>)
-    let randomBeerViewModel  = RandomBeerViewModel()
+    private let randomBeerViewModel  = RandomBeerViewModel()
     private let beerViewTamplate = DetailBeerView()
     private let randomButton: UIButton = {
         let randomButton = UIButton()
@@ -21,8 +19,6 @@ final class RandomBeerVC: UIViewController {
         randomButton.isEnabled = true
         return randomButton
     }()
-    
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,23 +26,12 @@ final class RandomBeerVC: UIViewController {
         setupUI()
         addTargets()
     }
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(nibName: nil, bundle: nil)
-
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     //MARK: - SetupUI
     private func setupVC() {
         view.backgroundColor = .white
         title = "Random beer"
         beerViewTamplate.isHidden = true
     }
-    
     private func setupUI() {
         view.addSubview(beerViewTamplate)
         beerViewTamplate.snp.makeConstraints { make in
@@ -61,26 +46,16 @@ final class RandomBeerVC: UIViewController {
             make.height.equalTo(30)
         }
     }
-    
-    
-    
-    
     //MARK: - Private methods
     private func addTargets() {
         randomButton.addTarget(self, action: #selector(getRandomBeer), for: .touchUpInside)
     }
-    //MARK: - Public methods
-    
-    
     //MARK: - @objc methods
     @objc private func getRandomBeer() {
         randomBeerViewModel.fetchRandomBeer { randomBeer in
             guard let randomBeer = randomBeer else { return }
             self.beerViewTamplate.configureView(singleBeer: randomBeer)
             self.beerViewTamplate.isHidden = false
-//            let detailVC = DetailVC(beer: randomBeer)
-//            self.show(detailVC, sender: self)
-
         }
     }
 }
