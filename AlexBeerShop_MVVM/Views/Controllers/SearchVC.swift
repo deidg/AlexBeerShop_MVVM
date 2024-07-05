@@ -80,7 +80,7 @@ extension SearchVC: UISearchResultsUpdating {
             beerViewTamplate.isHidden = true
             onBoardLabel.isHidden = false
             onBoardLabel.text = "Enter beer ID (from 1 to 25)"
-            onBoardLabel.textColor = .red
+            onBoardLabel.textColor = .black
         } else if let inputId = Int(searchController.searchBar.text ?? ""), inputId > 0 && inputId < 26 {
             searchByIdVewModel.fetchBeerById(inputId: inputId) { [weak self] (singleBeer: SingleBeer?) in
                 guard let self = self, let beer = singleBeer else { return }
